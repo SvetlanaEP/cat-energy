@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CAT ENERGY: Подбор программы</title>
+</head>
+<body class="page__body">
+<header class="page-header">
+    <a href="index.html" class="page-header__logo">
+        <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat energy">
+        <img src="img/logo2-mobile.svg" width="101" height="18" alt="Cat energy">
+    </a>
+
+    <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="index.html">
+                        Главная
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="catalog.html">
+                        Каталог продукции
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--current">
+                    <a href="#">
+                        Подбор программы
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="page-main">
+    <h1 class="page-main__title">Подбор программы</h1>
+    <p class="page-main__text">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+    </p>
+
+    <section class="page-main__form form">
+        <form class="form__wrapper" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__fields info-cat">
+                <p class="form__field">
+                    <label for="name-cat">Имя:*</label>
+                    <input class="form__input" type="text" id="name-cat" name="name-cat" placeholder="Барсик">
+                </p>
+                <p class="form__field">
+                    <label for="weight-cat">Вес (кг):*</label>
+                    <input class="form__input" type="number" id="weight-cat" name="weight-cat" placeholder="7">
+                </p>
+                <p class="form__field">
+                    <label for="age-cat">Возраст (лет):</label>
+                    <input class="form__input" type="number" id="age-cat" name="age-cat" placeholder="7">
+                </p>
+            </div>
+            <div class="form__program program">
+                <ul class="program__list">
+                    <li class="program__item">
+                        <input type="radio" id="program1" name="Похудение" value="Похудение" checked>
+                        <label class="program__radio" for="program1">Похудение</label>
+                    </li>
+                    <li class="program__item">
+                        <input type="radio" id="program2" name="Набор" value="Набор">
+                        <label class="program__radio" for="program2">Набор массы</label>
+                    </li>
+                    <li class="program__item">
+                        <input type="radio" id="program3" name="Совет" value="Совет">
+                        <label class="program__radio" for="program3">Не знаю (Нужен ваш совет)</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form__fields info-owner">
+                <p class="form__field info-owner__email">
+                    <label for="email">E-mail:*</label>
+                    <input class="form__input" type="text" id="email" name="e-mail" placeholder="kuklachev@gmail.com">
+                </p>
+                <p class="form__field info-owner__phone">
+                    <label for="phone">Телефон:*</label>
+                    <input class="form__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                </p>
+            </div>
+            <div class="form__comment comment">
+                <h2 class="comment__heading">Комментарий</h2>
+                <p class="form__field comment__text">
+                    <label class="visually-hidden" for="comment">Комментарий</label>
+                    <input class="form__input comment__input" type="text" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота">
+                </p>
+            </div>
+            <div class="form__additional additional">
+                <ul class="additional__list" >
+                    <li class="additional__item">
+                        <input type="checkbox" id="dop1" name="Сахарозаменитель" value="Сахар" checked>
+                        <label for="dop1">Сахарозаменитель</label>
+                    </li>
+                    <li class="additional__item">
+                        <input type="checkbox" id="dop2" name="Питьевая вода" value="Вода">
+                        <label for="dop2">Питьевая вода</label>
+                    </li>
+                    <li class="additional__item">
+                        <input type="checkbox" id="dop3" name="Молоко" value="Молоко">
+                        <label for="dop3">Молоко</label>
+                    </li>
+                    <li class="additional__item">
+                        <input type="checkbox" id="dop4" name="Витамины" value="Витамины">
+                        <label for="dop4">Витамины</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form__button-and-note button-and-note">
+                <button class="button-and-note__button button" type="submit">Отправить заявку</button>
+                <p class="button-and-note__note">* — Обязательные поля</p>
+            </div>
+        </form>
+    </section>
+
+    <footer class="page-footer contacts">
+        <h2 class="visually-hidden"> Контакты компании </h2>
+        <p class="contacts__text">
+            Приглашаем к сотрудничеству дилеров!
+        </p>
+        <p class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+        <img src="img/map-mobile.png" width="640" height="724"
+             alt="Компания находится по адресу:улица Большая Конюшенная, дом 19/8, Санкт-Петербург">
+    </footer>
+</main>
+
+<footer class="page__footer footer">
+    <a class="footer__logo">
+        <img src="img/footer-logo.svg" width="128" height="24" alt="Cat energy">
+    </a>
+
+    <ul class="footer__social social">
+        <li class="social__item">
+            <a class="social__link" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+            </a>
+        </li>
+        <li class="social__item">
+            <a class="social__link" href="#">
+                <span class="visually-hidden">Instagram</span>
+            </a>
+        </li>
+        <li class="social__item">
+            <a class="social__link" href="#">
+                <span class="visually-hidden">Facebook</span>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+</body>
+</html>
