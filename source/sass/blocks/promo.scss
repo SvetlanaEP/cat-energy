@@ -1,0 +1,27 @@
+.promo {
+  padding: 20px;
+
+  color: $color-white;
+
+  background-color: $color-background;
+  background-image: url("../../img/background/background-desktop.jpg");
+
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+
+.promo__heading {
+  font-family: $font-heading;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: $regular;
+}
+
+.promo__text {
+  font-family: $font-heading;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: $regular;
+  text-transform: uppercase;
+}
