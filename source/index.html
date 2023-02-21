@@ -9,14 +9,16 @@
   <body class="page__body">
   <header class="page__header page-header">
     <nav class="page-header__nav">
-      <a class="page-header__logo logo" >
-        <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat energy">
-        <img class="logo__sign" src="img/logo2-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
-      </a>
+      <div class="page-header__container">
+        <a class="page-header__logo logo" >
+          <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat energy">
+          <img class="logo__sign" src="img/logo2-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
+        </a>
 
-      <button class="page-header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
 
       <ul class="page-header__menu site-menu">
         <li class="site-menu__item site-menu__item--current">
@@ -140,7 +142,7 @@
 
   <footer class="page__footer page-footer">
     <a class="page-footer__logo logo">
-      <img class="logo__image" src="img/footer-logo.svg" width="128" height="24" alt="Cat energy">
+      <img class="logo__sign" src="img/footer-logo.svg" width="128" height="24" alt="Cat energy">
     </a>
 
     <ul class="page-footer__social social">
@@ -160,6 +162,12 @@
         </a>
       </li>
     </ul>
+
+    <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+      <span class="visually-hidden">Разработано в</span>
+      HTML Academy
+      <img class="developer__image" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="" aria-hidden="true">
+    </a>
   </footer>
   </body>
 </html>

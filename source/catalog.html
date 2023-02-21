@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>CAT ENERGY: Подбор программы</title>
+  <meta charset="UTF-8">
+  <title>CAT ENERGY: Подбор программы</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="page__header page-header">
@@ -199,7 +200,9 @@
       <div class="catalog-list__item show-more">
         <p class="show-more__heading">Показать еще 100500 товаров</p>
         <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-        <a class="show-more__button button" href="#">Показать все</a>
+        <a class="show-more__button button button--disabled" href="#">
+          Показать все
+        </a>
       </div>
     </section>
 
@@ -302,6 +305,12 @@
       </a>
     </li>
   </ul>
+
+  <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+    <span class="visually-hidden">Разработано в</span>
+    HTML Academy
+    <img class="developer__image" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="" aria-hidden="true">
+  </a>
 </footer>
 
 </body>
