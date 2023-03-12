@@ -1,17 +1,14 @@
-.contacts {
+.show-more__heading {
   font-family: $font-heading;
-  font-weight: $regular;
-
-  padding: 20px;
-}
-
-.contacts__text {
   font-size: 16px;
+  font-weight: $regular;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.contacts__address {
-  font-size: 14px;
+.show-more__text {
   color: $dark-grey;
+
+  font-size: 12px;
+  line-height: 16px;
 }

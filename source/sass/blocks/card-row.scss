@@ -1,0 +1,18 @@
+.card-row {
+  padding: 20px;
+}
+
+.card-row__heading {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: $regular;
+  color: $color-heading;
+  text-transform: uppercase;
+}
+
+.card-row__list {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $regular;
+  color: $dark-grey;
+}

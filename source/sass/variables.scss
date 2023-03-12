@@ -1,4 +1,9 @@
-$font-page: "Oswald", Arial, sans-serif;
+//width
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+//fonts
+$font-body: Arial, sans-serif;
 $font-heading: "Oswald", Arial, sans-serif;
 $regular: 400;
 $medium: 500;
@@ -7,6 +12,6 @@ $medium: 500;
 $basic-green: #68B738;
 $color-white: #ffffff;
 $color-black: #000000;
-$color-background: rgba(104, 183, 56, 0.85);
 $dark-grey: #444444;
-$basic-grey: #F2F2F2
+$basic-grey: #F2F2F2;
+$color-heading: #222222;

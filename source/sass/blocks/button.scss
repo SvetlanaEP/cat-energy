@@ -1,5 +1,5 @@
 .button {
-  font-family: $font-page;
+  font-family: $font-heading;
   font-size: 14px;
   line-height: 18px;
   color: $color-white;
@@ -9,4 +9,9 @@
   border: none;
 
   background-color: $basic-green;
+}
+
+.button--disabled {
+  background-color: $basic-grey;
+  color: $dark-grey;
 }

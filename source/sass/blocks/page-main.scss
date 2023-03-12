@@ -1,5 +1,13 @@
 .page-main__heading {
+  font-family: $font-heading;
   font-size: 36px;
   font-weight: $regular;
   line-height: 40px;
+}
+
+.page-main__subheading {
+  font-family: $font-heading;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
 }

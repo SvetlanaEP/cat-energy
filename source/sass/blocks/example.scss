@@ -2,14 +2,14 @@
   background-color: $basic-grey;
   padding: 26px 20px 40px;
 
-  font-family: $font-page;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: $regular;
 }
 
 .example__text {
   color: $dark-grey;
+}
+
+.example__list {
+  text-align: center;
 }
 
 .example__title {
@@ -20,12 +20,14 @@
 }
 
 .example__definition {
+  font-family: $font-heading;
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .example__spending {
+  font-family: $font-heading;
   line-height: 20px;
   text-transform: uppercase;
 }
