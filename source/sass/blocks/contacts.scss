@@ -1,8 +1,16 @@
 .contacts {
   font-family: $font-heading;
   font-weight: $regular;
+}
 
-  padding: 20px;
+.contacts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contacts__map {
+  margin: 0 auto;
+  grid-column: 1/3;
 }
 
 .contacts__text {

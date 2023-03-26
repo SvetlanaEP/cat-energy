@@ -1,13 +1,28 @@
 .promo {
-  padding: 20px;
-
   color: $color-white;
 
   background: $basic-green;
-  background: url("../../img/background/background-header.jpg");
+  background: url("../../img/background/bg-header--mobile.jpg");
   background-repeat: no-repeat;
-
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    color: $color-black;
+    background-color: transparent;
+
+    text-align: left;
+  }
+}
+
+.promo__container {
+  @media (min-width: $tablet-width) {
+    padding-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+
+  }
 }
 
 .promo__heading {

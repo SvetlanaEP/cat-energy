@@ -1,5 +1,5 @@
 .process {
-  padding: 20px;
+
 }
 
 .process__list {
@@ -9,5 +9,27 @@
   color: $dark-grey;
 
   list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 94px;
+  }
+}
+
+.process__item {
+  @media (max-width: $only-mobile-width) {
+    & + & {
+      margin-top: 20px;
+    }
+  }
 }
 

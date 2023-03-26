@@ -1,7 +1,13 @@
 .example {
   background-color: $basic-grey;
-  padding: 26px 20px 40px;
+}
 
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .example__text {
@@ -32,11 +38,3 @@
   text-transform: uppercase;
 }
 
-.switcher__button {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  border: none;
-  background: none;
-}
