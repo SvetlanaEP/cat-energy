@@ -1,5 +1,14 @@
-.catalog-additional {
-  padding: 20px;
+.catalog-additional__container {
+  display: grid;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 70px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
 }
 
 .catalog-additional__heading {
@@ -8,7 +17,12 @@
   line-height: 24px;
   font-weight: $regular;
   color: $color-heading;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
 }
+
 
 .catalog-additional__list {
   list-style: none;

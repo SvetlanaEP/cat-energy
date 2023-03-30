@@ -4,6 +4,10 @@
   line-height: 16px;
   font-weight: $regular;
   color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-grey;
+  }
 }
 
 .card__heading {
