@@ -1,7 +1,23 @@
-.form {
-  padding: 20px;
+.form__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 65px;
+    column-gap: 80px;
+  }
 }
-
 .form__group {
   margin: 0;
+
+  &--contacts, &--comment, &--additional {
+    @media (min-width: $desktop-width) {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.form__footer {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
 }
