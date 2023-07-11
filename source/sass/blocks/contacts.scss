@@ -3,14 +3,13 @@
   font-weight: $regular;
 }
 
-.contacts__container {
+.contacts__preview {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .contacts__map {
   margin: 0 auto;
-  grid-column: 1/3;
 }
 
 .contacts__text {

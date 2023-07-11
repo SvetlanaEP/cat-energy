@@ -26,4 +26,8 @@
 
 .catalog-additional__list {
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-2;
+  }
 }

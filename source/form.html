@@ -105,7 +105,7 @@
           <fieldset class="form__group form__group--contacts field-group">
             <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
 
-            <ul class="field-group__list">
+            <ul class="field-group__list field-group__list--contacts">
               <li class="field-group__item">
                 <label class="field">
                   <span class="field__lead">E-mail:*</span>
@@ -132,7 +132,7 @@
           <fieldset class="form__group form__group--additional field-group">
             <legend class="visually-hidden"> Дополнительно</legend>
 
-            <ul class="field-group__list">
+            <ul class="field-group__list field-group__list--additional">
               <li class="field-group__item">
                 <label class="control control--checkbox">
                   <input class="control__input" name="additional" type="checkbox" value="sweetener" checked>
@@ -172,9 +172,11 @@
   <footer class="page-main__footer contacts">
     <h2 class="visually-hidden"> Контакты компании </h2>
 
-    <div class="contacts__container container">
-      <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <div class="contacts__container">
+      <div class="contacts__preview container">
+        <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
 
       <img class="contacts__map" src="img/map-mobile.png" width="320" height="362"
            alt="Компания находится по адресу:улица Большая Конюшенная, дом 19/8, Санкт-Петербург">
