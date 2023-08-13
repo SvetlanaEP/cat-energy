@@ -1,3 +1,11 @@
+.catalog-sections {
+  padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
+  }
+}
+
 .catalog-sections__container {
 
   @media (min-width: $desktop-width) {
@@ -6,16 +14,18 @@
     gap: 80px;
   }
 }
+
 .catalog-sections__item {
+  position: relative;
   padding: 20px;
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
-    padding: 52px;
+    padding: 77px 316px 52px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 52px;
+    padding: 47px 52px 55px;
   }
 
   & + & {

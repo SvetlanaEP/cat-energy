@@ -1,41 +1,109 @@
 .promo {
   color: $color-white;
-
-  background: $basic-green;
-  background: url("../../img/background/bg-header--mobile.jpg");
-  background-repeat: no-repeat;
   text-align: center;
+  height: 302px;
+  margin-bottom: 178px;
+
+  @media (max-width: $only-mobile-width) {
+    background: $basic-green;
+    background: url("../../img/background/bg-header--mobile.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   @media (min-width: $tablet-width) {
+    height: auto;
+    margin-bottom: 0;
     color: $color-black;
-    background-color: transparent;
+    background: transparent;
 
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -143px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -2;
+
+      background-color: $basic-green;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-image: url("../../img/background/bg-header--desktop.jpg");
+    }
+
   }
 }
 
 .promo__container {
+  padding-top: 27px;
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
-    padding-left: 90px;
+    position: relative;
+    padding: 62px 207px 526px 87px ;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 80px;
-
+    padding: 29px 590px 185px 80px;
   }
 }
 
 .promo__heading {
+  display: block;
+  min-height: 72px;
+  margin: 0 0 25px;
+
   font-family: $font-heading;
   font-size: 36px;
   line-height: 1;
   font-weight: $regular;
+
+  @media (min-width: $tablet-width) {
+    min-height: 120px;
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .promo__text {
+  margin: 0 0 29px;
+
   font-family: $font-heading;
   font-size: 14px;
   line-height: 1;
   font-weight: $regular;
   text-transform: uppercase;
+}
+
+.promo__image {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+    left: calc(50% - 114px)
+  }
+}
+
+.promo__button {
+  justify-self: end;
+
+  @media (min-width: $tablet-width) {
+    width: 55%;
+  }
 }
