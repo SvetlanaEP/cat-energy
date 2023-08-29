@@ -205,4 +205,24 @@
   color: $color-black;
   text-transform: uppercase;
   text-decoration: none;
+
+  &::after {
+    content: '';
+    width: 24px;
+    height: 10px;
+
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-image: url("../../img/icons/arrow.svg");
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

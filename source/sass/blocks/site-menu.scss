@@ -26,6 +26,10 @@
 }
 
 .site-menu--desktop-main .site-menu__link {
-  color: $color-white;
+
+  @media (min-width: $desktop-width) {
+    color: $color-white;
+  }
+
 }
 
