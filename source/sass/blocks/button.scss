@@ -13,6 +13,14 @@
   border: none;
 
   background-color: $basic-green;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
 }
 
 .button--disabled {
