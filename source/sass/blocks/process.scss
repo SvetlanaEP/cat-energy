@@ -1,3 +1,15 @@
+.process {
+  padding: 20px 0 48px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 0 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 71px 0 26px;
+  }
+}
+
 .process__list {
   font-size: 14px;
   line-height: 18px;
@@ -5,27 +17,104 @@
   color: $dark-grey;
 
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 153px;
+    column-gap: 135px;
     row-gap: 37px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-right: 75px;
+
+    counter-reset: process;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 94px;
+    gap: 86px;
+    margin-right: 0;
   }
 }
 
 .process__item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+
   @media (max-width: $only-mobile-width) {
     & + & {
       margin-top: 20px;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    grid-template-columns: auto;
+    grid-template-rows: 80px 1fr;
+    gap: 31px;
+
+    min-height: 240px;
+    padding-top: 40px;
+
+    counter-increment: process;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 240px;
+    padding-top: 40px;
+  }
+
+  &::before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+  @media (min-width: $tablet-width) {
+    content: counter(process);
+    position: absolute;
+
+    font-family: $font-heading;
+    font-size: 280px;
+    line-height: 1;
+    color: $basic-grey;
+
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+}
+
+.process__item--leaf::before {
+  background-image: url("../../img/icons/icon_leaf.svg");
+}
+
+.process__item--powder::before {
+  background-image: url("../../img/icons/icon_powder.svg");
+}
+
+.process__item--meal::before {
+  background-image: url("../../img/icons/icon_meal.svg");
+}
+
+.process__item--weight::before {
+  background-image: url("../../img/icons/icon_weight.svg");
 }
 
