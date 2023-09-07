@@ -1,5 +1,13 @@
 .example {
+  padding: 26px 0 40px;
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+
+    border-top: 1px solid $color-grey;
+    background-image: linear-gradient(to top, $color-grey 462px, $color-white 462px);
+  }
 }
 
 .example__container {
@@ -10,22 +18,72 @@
   }
 }
 
+.example__content {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 80px;
+  }
+}
+
+.example__heading {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+}
+
 .example__text {
   color: $dark-grey;
+  margin: 0 0 17px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    margin-bottom: 54px;
+  }
 }
 
 .example__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+
   text-align: center;
+  margin: 0 0 23px;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  padding: 14px 0 0;
+
+  border: 1px solid $color-grey;
+  border-radius: 4px;
 }
 
 .example__title {
+  max-width: 77px;
   color: $dark-grey;
   font-size: 12px;
   line-height: 1;
   text-transform: lowercase;
+
+  margin-bottom: -12px;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    background-color: $color-white;
+  }
 }
 
 .example__definition {
+  margin: 0;
+  padding-bottom: 7px;
+
   font-family: $font-heading;
   font-size: 24px;
   line-height: 1;
@@ -34,7 +92,45 @@
 
 .example__spending {
   font-family: $font-heading;
+  font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    text-align: right;
+    padding-left: 50%;
+    max-width: 180px;
+
+  }
 }
 
+.example__view {
+  margin: 0 auto;
+  width: 280px;
+  @media (min-width: $tablet-width) {
+    min-height: 576px;
+  }
+}
+
+.example__images {
+
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    padding: 0 58px;
+  }
+}
+
+.example__image {
+  display: none;
+}
+
+.example__image--active {
+  display: block;
+}
