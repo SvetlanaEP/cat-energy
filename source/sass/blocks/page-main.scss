@@ -5,6 +5,11 @@
   line-height: 40px;
 
   margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .page-main__subheading {
