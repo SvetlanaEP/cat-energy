@@ -1,8 +1,17 @@
 .switcher {
-  margin: 0 35px;
+  padding: 0 35px;
   display: grid;
   grid-template-columns: 49px 1fr 49px;
   gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 70px 1fr 70px;
+    padding: 0 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .switcher__button {
@@ -17,6 +26,23 @@
 
   border: none;
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    justify-self: center;
+
+    padding: 0 0 6px;
+
+    border-bottom: 1px dotted #B2B2B2;
+
+    &:hover {
+      border-bottom: 1px solid #919191;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
 }
 
 .switcher__toggler {
@@ -33,7 +59,7 @@
 
   &::after {
     content: "";
-    width: 36px;
+    width: 50%;
     height: 6px;
     border-radius: 6px;
     background-color: $basic-green;
@@ -52,8 +78,9 @@
   }
 }
 
-
 .switcher__bar {
+  appearance: none;
+  background-color: transparent;
 
   @media (max-width: $only-mobile-width) {
     display: none;
@@ -63,37 +90,8 @@
 .switcher__range {
   appearance: none;
   background-color: transparent;
+  width: 100%;
 }
-
-/*
-
-.switcher__bar::-moz-range-thumb {
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  box-sizing: border-box;
-
-  border: 11px solid $color-white;
-  border-radius: 50%;
-  background-color: $basic-green;
-  box-shadow:
-    0 0 0 1px $basic-green,
-    0 1px 3px rgba($basic-green, 0.16);
-  cursor: pointer;
-
-  &:hover {
-    box-shadow:
-      0 0 0 1px $basic-green,
-      0 2px 4px rgba($color-black, 0.19);
-  }
-
-  &:active {
-    box-shadow:
-      0 0 0 1px $basic-green,
-      0 3px 5px rgba($color-black, 0.2);
-  }
-}
-*/
 
 .switcher__range::-webkit-slider-thumb {
   appearance: none;
@@ -159,7 +157,7 @@
 
 .switcher__range::-webkit-slider-runnable-track {
   height: 6px;
-  background-color: $color-grey-2;
+  background-color: #DCDCDC;
   border-radius: 6px;
 }
 

@@ -165,27 +165,44 @@
 
 .example__view {
   margin: 0 auto;
-  width: 280px;
+  width: 87.5%;
   @media (min-width: $tablet-width) {
     min-height: 576px;
+    width: 591px;
   }
 }
 
 .example__images {
-
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 50% 1fr;
-    padding: 0 58px;
+    padding: 0;
+    overflow: hidden;
   }
 }
-
 .example__image {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    overflow: hidden;
+
+    img {
+      width: 594px;
+      height: 511px;
+      max-width: none;
+    }
+  }
 }
 
 .example__image--active {
   display: block;
+  text-align: center;
 }
+
+.example__image--after {
+  justify-content: end;
+}
+
