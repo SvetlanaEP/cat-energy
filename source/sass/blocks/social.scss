@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: center;
+
+  height: 63px;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    gap: 24px;
+    height: auto;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      stroke: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      stroke: $basic-green;
+    }
+  }
+}

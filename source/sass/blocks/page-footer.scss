@@ -1,6 +1,4 @@
 .page-footer {
-  padding: 20px;
-
   background-color: $basic-grey;
 }
 
@@ -9,5 +7,11 @@
     display: grid;
     grid-template-columns: 164px 1fr 164px;
     gap: 16px;
+    margin-top: 58px;
+    margin-bottom: 55px;
+
+    @media (min-width: $desktop-width) {
+
+    }
   }
 }

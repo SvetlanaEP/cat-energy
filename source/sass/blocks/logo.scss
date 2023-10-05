@@ -22,3 +22,14 @@
 .logo__sign {
   justify-self: center;
 }
+
+.logo--footer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @media (max-width: $only-mobile-width) {
+    min-height: 95px;
+    justify-content: center;
+  }
+}
