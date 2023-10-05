@@ -92,11 +92,17 @@
     bottom: 0;
     right: 0;
     z-index: -1;
+
+    width: 708px;
+    height: 609px;
   }
 
   @media (min-width: $desktop-width) {
     top: 0;
-    left: calc(50% - 114px)
+    left: calc(50% - 114px);
+
+    width: 552px;
+    height: 499px;
   }
 }
 
