@@ -15,27 +15,3 @@
     grid-template-columns: 202px 1fr;
   }
 }
-
-.page-header__bar {
-  @media (max-width: $only-mobile-width) {
-    margin: 0 auto;
-    padding: 12px 20px 17px;
-    display: grid;
-    grid-template-columns: 34px 1fr 34px;
-    gap: 16px;
-  }
-}
-
-.page-header__logo {
-  grid-column: 1/3;
-}
-
-.page-header__menu {
-  margin: 0;
-}
-
-.page-header__toggle {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
