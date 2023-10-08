@@ -1,3 +1,11 @@
+.catalog-list {
+  overflow: hidden;
+
+  @media (max-width: $only-mobile-width) {
+    border-bottom: 1px solid $color-grey ;
+  }
+}
+
 .catalog-list__container {
   @media (min-width: $tablet-width) {
     display: grid;
@@ -9,5 +17,25 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 63px;
+  }
+}
+
+.catalog-list__item {
+  margin: 0 auto;
+
+  @media (max-width: $only-mobile-width) {
+    position: relative;
+    max-width: 500px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100vw;
+      height: 1px;
+      background-color: $color-grey-2;
+
+      top: 0;
+      left: calc(50% - 50vw);
+    }
   }
 }

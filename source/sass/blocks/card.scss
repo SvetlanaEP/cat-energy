@@ -5,8 +5,29 @@
   font-weight: $regular;
   color: $dark-grey;
 
+  padding: 19px 0 25px;
+
+  display: grid;
+
+  @media (max-width: $only-mobile-width) {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "img link"
+      "img list"
+      "btn btn";
+  }
+
   @media (min-width: $tablet-width) {
+    grid-template-rows: 200px auto;
+
     background-color: $basic-grey;
+
+    grid-template-areas:
+      "img"
+      "link"
+      "list"
+      "btn";
   }
 }
 
@@ -16,8 +37,41 @@
   font-weight: $regular;
   color: $color-heading;
   text-transform: uppercase;
+
+  width: 55%;
+  margin: 0 0 18px;
+}
+
+
+
+.card__link {
+  grid-area: link;
+}
+
+.card__img {
+  grid-area: img;
+
+  align-self: center;
+  justify-self: center;
 }
 
 .card__list {
-  font-size: 12px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2px;
+   grid-area: list;
+
+   font-size: 12px;
+   font-family: $font-body;
+
+   margin: 0;
+}
+
+.card__definition {
+  margin-left: auto;
+}
+
+.card__button {
+  margin-top: 22px;
+  grid-area: btn;
 }
