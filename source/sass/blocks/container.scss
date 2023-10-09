@@ -1,15 +1,13 @@
 .container {
-  margin-right: 20px;
-  margin-left: 20px;
+  width: 87.5%;
+  margin-right: auto;
+  margin-left: auto;
 
   @media (min-width: $tablet-width) {
-    margin-right: 30px;
-    margin-left: 30px;
+    width: 92.2%;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
-    margin-right: auto;
-    margin-left: auto;
   }
 }

@@ -1,10 +1,22 @@
 .main-nav__bar {
   @media (max-width: $only-mobile-width) {
+    position: relative;
     margin: 0 auto;
-    padding: 12px 20px 17px;
+    padding: 12px 0 17px;
     display: grid;
     grid-template-columns: 34px 1fr 34px;
     gap: 16px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100vw;
+      height: 1px;
+      background-color: $color-grey;
+
+      left: calc(50% - 50vw);
+      bottom: 0;
+    }
   }
 }
 
