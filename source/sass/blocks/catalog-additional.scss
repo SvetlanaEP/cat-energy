@@ -1,3 +1,31 @@
+.catalog-additional__decor {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    height: 2px;
+    width: calc(100% - 50px);
+
+    right: 0;
+    top: 37px;
+
+    background-color: $basic-green;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      top: 91px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 100px;
+    }
+  }
+}
+
 .catalog-additional__container {
   display: grid;
   gap: 35px;
@@ -17,6 +45,25 @@
   line-height: 24px;
   font-weight: $regular;
   color: $color-heading;
+
+  background-color: $color-white;
+
+  margin: 25px 0 0;
+  width: 226px;
+  padding-right: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    padding: 0 37px;
+    margin-top: 68px;
+    width: 338px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 76px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
