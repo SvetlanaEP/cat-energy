@@ -1,14 +1,85 @@
+.card-row {
+  padding: 13px 0 19px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 27px 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 32% 32% 1fr;
+    gap: 40px;
+
+    padding: 15px 0;
+
+    align-items: baseline;
+  }
+}
+
 .card-row__heading {
+  font-family: $font-heading;
   font-size: 16px;
   line-height: 20px;
   font-weight: $regular;
   color: $color-heading;
   text-transform: uppercase;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .card-row__list {
-  font-size: 12px;
-  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  line-height: 14px;
   font-weight: $regular;
   color: $dark-grey;
+
+  text-align: end;
+
+  margin: 13px 0 15px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 223px 83px;
+    justify-content: end;
+    gap: 10px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    margin: 0 0 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.card-row__definition {
+  margin: 0;
+}
+
+.card-row__button {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+  }
 }
