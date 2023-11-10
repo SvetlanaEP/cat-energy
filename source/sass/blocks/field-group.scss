@@ -1,5 +1,5 @@
 .field-group {
-  padding: 20px 0;
+  padding: 0;
   border: none;
 }
 
@@ -12,8 +12,19 @@
 
 .field-group__list {
   padding: 0;
+  margin: 0;
 
   list-style: none;
+}
+
+.field-group__item {
+  & + & {
+    margin-top: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .field-group__list--contacts {

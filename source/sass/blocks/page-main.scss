@@ -1,3 +1,20 @@
+.page-main__header {
+  padding-top: 28px;
+
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $tablet-width) {
+  padding-top: 74px;
+  }
+}
+
+
 .page-main__heading {
   font-family: $font-heading;
   font-size: 36px;
@@ -9,6 +26,8 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+
+    margin-bottom: 32px;
   }
 }
 
@@ -17,4 +36,11 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -2,7 +2,7 @@
   color: $color-white;
   text-align: center;
   height: 302px;
-  margin-bottom: 178px;
+  margin-bottom: 145px;
 
   @media (max-width: $only-mobile-width) {
     background: $basic-green;
@@ -43,7 +43,6 @@
 }
 
 .promo__container {
-  padding-top: 27px;
   display: flex;
   flex-direction: column;
 
