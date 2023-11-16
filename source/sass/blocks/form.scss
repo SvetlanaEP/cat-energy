@@ -1,5 +1,6 @@
 .form {
   overflow: hidden;
+  margin-bottom: 32px;
 }
 
 .form__container {
@@ -44,8 +45,23 @@
   }
 }
 
+.form__button {
+  margin-bottom: 21px;
+}
+
+.form__additional {
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+  text-align: center;
+  margin: 0;
+}
+
 .form__footer {
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
   }
 }
+
