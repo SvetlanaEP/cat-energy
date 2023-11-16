@@ -1,10 +1,20 @@
 .contacts {
   font-family: $font-heading;
   font-weight: $regular;
+  background-color: $basic-grey;
+  padding-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+  }
 
   @media (min-width: $desktop-width) {
-    background-color: $basic-grey;
+    padding: 0;
   }
+}
+
+.contacts--index {
+  background-color: $color-white;
 }
 
 .contacts__container {
@@ -16,10 +26,10 @@
 .contacts__preview {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 26px auto;
+  margin: 0 auto 26px;
 
   @media (min-width: $tablet-width) {
-    margin: 56px auto;
+    margin: 0 auto 56px;
   }
 
   @media (min-width: $desktop-width) {
