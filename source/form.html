@@ -103,7 +103,11 @@
           </fieldset>
 
           <fieldset class="form__group form__group--contacts field-group">
-            <legend class="field-group__heading">Контактные данные (владельца кота)</legend>
+
+            <legend class="field-group__heading">
+              <span class="field-group__decor"></span>
+              <span>Контактные данные (владельца кота)</span>
+            </legend>
 
             <ul class="field-group__list field-group__list--contacts">
               <li class="field-group__item">
@@ -122,15 +126,21 @@
           </fieldset>
 
           <div class="form__group form__group--comment field-group">
-            <label class="field-group__heading" for="comment">Комментарий</label>
+            <label class="field-group__heading" for="comment">
+              <span class="field-group__decor"></span>
+              <span> Комментарий </span>
+            </label>
 
-            <div class="field">
+            <div class="field-group__field field field--no-label">
               <textarea class="field__input" name="comment" id="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </div>
 
           <fieldset class="form__group form__group--additional field-group">
-            <legend class="visually-hidden"> Дополнительно</legend>
+            <legend class="field-group__heading">
+              <span class="field-group__decor"></span>
+              <span>Дополнительно</span>
+            </legend>
 
             <ul class="field-group__list field-group__list--additional">
               <li class="field-group__item">

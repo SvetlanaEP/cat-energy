@@ -25,12 +25,17 @@
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
+
   color: $dark-grey;
   border: 1px solid $menu-border;
   text-transform: uppercase;
 
   margin: 0;
   padding: 13px 15px;
+
+  .field--no-label & {
+    grid-column: 1 / -1;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 10px 18px;
