@@ -16,6 +16,13 @@
 
   background-color: $basic-green;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+
+    padding: 13px 0;
+  }
+
   &:hover {
     background-color: $basic-green-2;
   }

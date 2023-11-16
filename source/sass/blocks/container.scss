@@ -11,3 +11,15 @@
     width: 1220px;
   }
 }
+
+.container--form {
+
+  @media (min-width: $tablet-width) {
+    width: 82%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
+
+}

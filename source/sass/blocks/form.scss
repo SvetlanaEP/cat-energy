@@ -1,6 +1,14 @@
 .form {
   overflow: hidden;
   margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .form__container {
@@ -19,6 +27,14 @@
 
   & + & {
     margin-top: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
   }
 
   &--contacts, &--comment, &--additional {
@@ -30,23 +46,38 @@
 
 .form__group--cat,
 .form__group--target {
-  position: relative;
-  padding-bottom: 25px;
 
-  &::after {
-    position: absolute;
-    content: '';
-    width: 100vw;
-    height: 1px;
-    background-color: $color-grey;
+  @media (max-width: $only-mobile-width) {
+    position: relative;
+    padding-bottom: 25px;
 
-    left: calc(50% - 50vw);
-    bottom: 0;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100vw;
+      height: 1px;
+      background-color: $color-grey;
+
+      left: calc(50% - 50vw);
+      bottom: 0;
+    }
+  }
+}
+
+.form__group--target {
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 28px;
+    border: 1px solid $color-grey;
   }
 }
 
 .form__button {
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .form__additional {
@@ -57,9 +88,29 @@
 
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .form__footer {
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 61px;
+
+    align-items: center;
+
+    @media (min-width: $desktop-width) {
+      gap: 81px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
   }

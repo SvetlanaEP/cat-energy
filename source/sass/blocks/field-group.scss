@@ -13,10 +13,21 @@
   margin-bottom: 35px;
   padding-right: 20px;
 
-  max-width: 190px;
-
   background-color: $color-white;
 
+  @media (max-width: $only-mobile-width) {
+    max-width: 190px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+
+    margin-bottom: 76px;
+    padding-right: 42px;
+    padding-left: 42px;
+    margin-left: -42px;
+  }
 }
 
 .field-group__decor {
@@ -25,18 +36,26 @@
   height: 100px;
   background-color: #919191;
 
-
   &::after {
     content: '';
     position: absolute;
 
     height: 2px;
-    width: 100vw;
+    width: 110vw;
 
     left: 0;
     top: 20px;
 
     background-color: $basic-green;
+
+    @media (min-width: $tablet-width) {
+      top: 24px;
+      left: -110px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1440px;
+    }
   }
 }
 
@@ -58,11 +77,23 @@
     @media (min-width: $tablet-width) {
       margin-top: 20px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
   }
 }
 
 .field-group__list--additional {
   margin-bottom: 35px;
+
+ .field-group__item + .field-group__item {
+   margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .field-group__list--contacts {
@@ -79,12 +110,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    column-gap: 61px;
     row-gap: 32px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 81px;
   }
 
 }
