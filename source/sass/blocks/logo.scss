@@ -4,6 +4,14 @@
     grid-template-columns: 34px 1fr;
     gap: 16px;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+     grid-template-columns: 61px 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 71px 1fr;
+    }
   }
 
   &:hover {
@@ -19,8 +27,25 @@
   }
 }
 
+.logo__image {
+  width: 34px;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 71px;
+  }
+}
+
 .logo__sign {
   justify-self: center;
+
+  @media (min-width: $desktop-width) {
+    justify-self: left;
+  }
 }
 
 .logo--footer {

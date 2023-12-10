@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CAT ENERGY: Функциональное питание для котов</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/180.png">
   </head>
   <body class="page__body">
   <header class="page__header page-header container">
     <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__bar">
         <a class="main-nav__logo logo" >
-          <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat energy">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/logo-image-desktop.svg">
+            <source media="(min-width: 767px)" srcset="./img/logo-image-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Cat energy">
+          </picture>
           <img class="logo__sign" src="img/logo2-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
         </a>
 
@@ -48,7 +55,12 @@
         <div class="promo__container">
           <h1 class="promo__heading">Функциональное питание для котов</h1>
           <p class="promo__text">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="img/index-can-mobile.png" width="280" height="270" alt="Изображение банки куриного корма cat energy">
+
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/index-can-desktop.png">
+            <source media="(min-width: 767px)" srcset="./img/index-can-tablet.png">
+            <img class="promo__image" src="img/index-can-mobile.png" width="280" height="270" alt="Изображение банки куриного корма cat energy">
+          </picture>
           <a class="promo__button button" href="./form.html">Подобрать программу</a>
         </div>
       </div>
