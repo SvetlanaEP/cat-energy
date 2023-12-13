@@ -151,12 +151,20 @@
         <div class="example__view">
           <div class="example__images">
             <div class="example__image example__image--active">
-              <img  src="img/example/before-mobile.png" width="280" height="232"
-                   alt="Фотография кота до похудения">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/example/cat-fat-medium.png 1x, img/example/cat-fat-medium@2x.png 2x">
+                <img  src="img/example/before-mobile.png" width="280" height="232"
+                      alt="Фотография кота до похудения">
+              </picture>
+
             </div>
             <div class="example__image example__image--after">
-              <img  src="img/example/after-mobile.png" width="243" height="232"
-                    alt="Фотография кота после похудения">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/example/cat-skinny-medium.png 1x, img/example/cat-skinny-medium@2x.png 2x">
+                <img  src="img/example/after-mobile.png" width="243" height="232"
+                      alt="Фотография кота после похудения">
+              </picture>
+
             </div>
 
           </div>
