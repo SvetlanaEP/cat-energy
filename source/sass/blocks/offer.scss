@@ -9,10 +9,14 @@
   color: $color-white;
   background-color: $basic-green;
   background-image:
-    url("../../img/background/cat-offer.jpg");
+    url("../../img/background/cat-offer-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background/cat-offer-mobile@2x.png");
+  }
 
   font-size: 16px;
   text-align: center;
@@ -40,6 +44,11 @@
     padding: 57px 124px 60px 77px;
 
     background-position: 50% 60%;
+    background-image: url("../../img/background/cat-offer-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/cat-offer-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -49,6 +58,11 @@
     padding: 56px 42px 42px;
 
     flex-direction: column;
+    background-image: url("../../img/background/cat-offer-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/cat-offer-desktop@2x.png");
+    }
   }
 }
 
