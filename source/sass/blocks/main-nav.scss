@@ -99,6 +99,10 @@
 }
 
 .main-nav--nojs .site-menu {
-  position: static;
-  display: block;
+
+  @media (max-width: $only-mobile-width) {
+    position: static;
+    display: block;
+  }
+
 }
