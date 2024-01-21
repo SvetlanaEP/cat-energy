@@ -9,6 +9,7 @@ import terser from 'gulp-terser';
 //import squoosh from "gulp-libsquoosh";
 import webp from 'gulp-webp'
 import svgstore from 'gulp-svgstore'
+import {deleteAsync} from 'del';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 
@@ -95,6 +96,12 @@ const copy = (done) => {
   done()
 }
 
+// Clean
+
+const clean = () => {
+  return deleteAsync('build')
+}
+
 // Server
 
 const server = (done) => {
@@ -120,6 +127,6 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, html,  copyImages, copy, createWebp, sprite, script, server, watcher
+  clean, styles, html,  copyImages, copy, createWebp, sprite, script, server, watcher
 );
 
