@@ -79,7 +79,7 @@
   .control--checkbox .control__input:checked + &::after {
     background-repeat: no-repeat;
     background-position: calc(50% + 1px) 50%;
-    background-image: url("/../img/icons/check.svg");
+    background-image: url("/../img/check.svg");
   }
 
 }

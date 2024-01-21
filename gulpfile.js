@@ -8,6 +8,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 //import squoosh from "gulp-libsquoosh";
 import webp from 'gulp-webp'
+import svgstore from 'gulp-svgstore'
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 
@@ -67,6 +68,33 @@ const createWebp = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+// Sprite
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgstore( {
+      inLineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'))
+}
+
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/img/**/*.svg',
+    '!source/img/icons/*.svg',
+  ],
+    {
+      base: 'source'
+    })
+    .pipe(gulp.dest('build'))
+  done()
+}
+
 // Server
 
 const server = (done) => {
@@ -87,10 +115,11 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html)).on('change', browser.reload);
   gulp.watch('source/**/*.js', gulp.series(script)).on('change', browser.reload);
+  gulp.watch('source/img/**/*.*', gulp.series(copyImages)).on('change', browser.reload);
 }
 
 
 export default gulp.series(
-  styles, html,  copyImages, createWebp, script, server, watcher
+  styles, html,  copyImages, copy, createWebp, sprite, script, server, watcher
 );
 
